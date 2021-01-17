@@ -1,0 +1,14 @@
+This is me trying to learn React from Brad's Youtube course.
+He won't be using React Hooks or Context API
+We will be creating a Todo list
+
+
+Important points learned:
+//Functional components can use state only by using React Hooks
+//If you want to install CRA without making a new folder but inside your current directory then use this command: $ npx create-react-app .
+
+// Context API: Context provides a way to pass data through the component tree without having to pass props down manually at every level
+
+// Serviceworkers are used for Progressive Web Apps (PWAs) stuff
+
+//Render is the lifecycle method
