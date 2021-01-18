@@ -12,3 +12,9 @@ Important points learned:
 // Serviceworkers are used for Progressive Web Apps (PWAs) stuff
 
 //Render is the lifecycle method
+
+//PropTypes are a sort of validation about our components' props. what prop types can they have . If they are required or not. As your app grows. you can catch a lot of bugs with typechecking. For some applications you can use JS extensions like FLow or TypeScript. But even if you don't use those, React has some built-in typechecking abilities.
+
+//Use react-router-dom package to add basic routing functionalities to your react page
+
+//In React while using Router, you cannot have a <a> (anchor tag). You need to instead use a link tag
