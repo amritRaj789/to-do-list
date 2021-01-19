@@ -5,7 +5,7 @@ import Header from './Layout/Header';
 import AddTodo from './Components/AddTodo';
 import About from './Components/Pages/About';
 import axios from 'axios';
-import {v4 as uuidv4} from 'uuid';
+// import {v4 as uuidv4} from 'uuid';
 
 import './App.css';
 
@@ -23,21 +23,21 @@ class App extends Component {
 
   // Delete Todo
   delTodo = (id) => {
-    this.setState({
+    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    .then(res => this.setState({
       todos: this.state.todos.filter((todo) => {
         return(todo.id !== id)
       })
-    })
+    }))
   }
 
   // Add Todo
   addTodo = (title) => {
-    const newTodo = {
-      id: uuidv4(),
+    axios.post('https://jsonplaceholder.typicode.com/todos', {
       title,
       completed: false
-    }
-    this.setState({ todos: [...this.state.todos, newTodo]})
+    })
+      .then(res => this.setState({ todos: [...this.state.todos, res.data]}))
   }
 
   //Toggle complete on checking
