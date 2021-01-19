@@ -4,30 +4,21 @@ import Todos from './Components/Todos';
 import Header from './Layout/Header';
 import AddTodo from './Components/AddTodo';
 import About from './Components/Pages/About';
-
+import axios from 'axios';
 import {v4 as uuidv4} from 'uuid';
 
 import './App.css';
 
 class App extends Component {
+
+
   state = {
-    todos: [
-    {
-      id: 1,
-      title: "Take the dog for a walk",
-      completed: false
-    },
-    {
-      id: 2,
-      title: "Buy some fruits",
-      completed: false
-    },
-    {
-      id: 3,
-      title: "Clean the room",
-      completed: true
-    }
-    ]
+    todos: []
+  }
+
+  componentDidMount() {
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
+    .then(res => this.setState({todos: res.data}))
   }
 
   // Delete Todo

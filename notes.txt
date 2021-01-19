@@ -2,6 +2,9 @@ This is me trying to learn React from Brad's Youtube course.
 He won't be using React Hooks or Context API
 We will be creating a Todo list
 
+We will be using Axios instead of Fetch API
+
+
 
 Important points learned:
 //Functional components can use state only by using React Hooks

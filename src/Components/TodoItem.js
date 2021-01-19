@@ -18,10 +18,12 @@ class TodoItem extends Component {
 
 		return (
 			<div style={this.getStyle()}>
-				<input type="checkbox" onChange={() => markComplete(todo.id)}/> {' '}
-				<p>{todo.title}</p>{
+				<p>
+					<input type="checkbox" onChange={() => markComplete(todo.id)}/> {' '}
+					{todo.title}
 					<button onClick={() => delTodo(todo.id)} style={btnStyle}>x</button>
-				}
+
+				</p>
 			</div>
 		)
 	}
